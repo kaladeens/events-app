@@ -1,0 +1,9 @@
+.background-img{
+    background-position: 50% 50%;
+    height: auto
+}
+.bg {
+    background-color: grey; min-height: 100vh;
+    background-size: cover;
+    width: 100%;
+}

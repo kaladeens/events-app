@@ -1,0 +1,53 @@
+<link rel = "stylesheet" href = "list-categories.component.css">
+<body class = "background-img">
+    <nav
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white "
+    style="background-image: url('assets/images/banner.jpeg');
+      background-position: 20% 20%;
+      height: 200px" 
+      
+  ></nav>
+
+<div class="container mt-5">
+    <h1>Categories Listing</h1>
+  </div>
+  <div class="container mt-5">
+    <table class="table table-hover table-secondary table-bordered table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Image</th>
+          <th>Date Created</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody class="tbody-light">
+        <ng-container *ngFor="let category of categories">
+          <tr>
+            <td>
+              {{ category.categoryID }}
+            </td>
+            <td>
+              {{ category.name }}
+            </td>
+            <td>
+              {{ category.description }}
+            </td>
+            <td>
+              <img *ngIf="category.image" [src]="category.image" alt="{{ category.name }}" width="50" height="50">
+              <span *ngIf="!category.image">No Image</span>
+            </td>
+            <td>
+              {{ category.dateAdded }}
+            </td>
+            <td>
+              <button class="btn btn-success" (click)="goToCategory(category.categoryID)" type="button">View</button>
+            </td>
+          </tr>
+        </ng-container>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,53 @@
+
+<link rel="stylesheet" href="index.component.css">
+<div class = "background-img">
+    <div class="container h-100">
+        <div class="row align-items-center h-75 centered" >
+            <div class=" text-black text-center rounded">
+                <h1 style="font-size: 50px">Events Manager App Home Page</h1>
+                <p style = "font-size: 20px"> Turning Your Event Chaos into Party Perfection, One Click at a Time!</p>
+                <p style = "font-size: small">Tip: Scroll up to see different paths for students!!</p>
+            </div>
+            <div class="mt-4 p-5 bg-secondary text-black text-center rounded">
+                <!-- columns where i have the counts of events and categories -->
+                <h1 style="font-size: 40px">Data counts</h1>
+                <div class = 'text-center mx-auto' >
+                <table class = "table table-striped mx-auto col-6 table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Events</th>
+                            <th>Categories</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{events}}</td>
+                            <td>{{categories}}</td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                <table class = "table table-striped mx-auto col-6 table-bordered">
+                <thead>
+                    <tr>
+                        <th>Add</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{{add}}</td>
+                        <td>{{update}}</td>
+                        <td>{{delete}}</td>
+                    </tr>
+                </tbody>
+            </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+

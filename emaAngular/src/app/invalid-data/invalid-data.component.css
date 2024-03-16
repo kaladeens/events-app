@@ -1,0 +1,7 @@
+.background-img {
+    min-height: 100vh;
+    background: url('../../assets/images/error.webp');
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+}

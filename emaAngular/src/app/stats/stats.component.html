@@ -1,0 +1,27 @@
+<link href ="stats.component.css" rel ="stylesheet">
+
+<div class ="background-img">
+   
+    <div class=" p-5 bg-secondary text-black text-center rounded ">
+        <!-- columns where i have the counts of events and categories -->
+        <h1 style="font-size: 40px">Data counts</h1>
+        <div class = 'text-center mx-auto' >
+            <table class = "table table-striped mx-auto col-6 table-bordered">
+            <thead>
+                <tr>
+                    <th>Create</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{create}}</td>
+                    <td>{{update}}</td>
+                    <td>{{delete}}</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+</div>

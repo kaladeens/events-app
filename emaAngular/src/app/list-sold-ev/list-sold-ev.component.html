@@ -1,0 +1,67 @@
+<link rel = "stylesheet" href = "list-sold-ev.component.css">
+<body class = "background-img">
+    <nav
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white "
+    style="background-image: url('assets/images/banner.jpeg');
+      background-position: 20% 20%;
+      height: 200px" 
+      
+  ></nav>
+    <div class = "container mt-5">
+        <h1 style="size:50px">Sold Out Events</h1>
+    </div>
+    <div class = "container mt-5">
+    <table class ='table table-hover table-secondary table-bordered table-striped'>
+        <thead class = 'table-dark'>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Start</th>
+                <th>End</th>
+                <th>Duration</th>
+                <th>Is Active</th>
+                <th>Capacity</th>
+                <th>Tickets Available</th>
+                <th>Category ID's</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody class = 'tbody-light'>
+            <ng-container *ngFor="let event of events">
+            <tr>
+                <td>
+                    {{event.eventID}}
+                </td>
+                <td>
+                    {{event.name}}
+                </td>
+                <td>
+                    {{event.dateStr}}
+                </td>
+                <td>
+                    {{event.endStr}}
+                </td>
+                <td>
+                    {{event.duration|time}}
+                </td>
+                <td>
+                    {{event.isActive}}
+                </td>
+                <td>
+                    {{event.capacity}}
+                </td>
+                <td>
+                    {{event.ticketsAvailable}}
+                </td>
+                <td>
+                    {{event|listCat}}
+                </td>
+                <td>
+                    <button class="btn btn-success" (click) = "goToEvent(event.eventID)"  type ="button">View</button>
+                </td>
+            </tr>
+            </ng-container>
+        </tbody>
+    </table>
+    </div>
+</body>
